@@ -21,9 +21,19 @@ int main(void)
     """
     在下方编写你的代码
     """
-    
+    unsighed char led_pattern;
+    unsighed char i;
+    whlie (1)
+{
+    for (i=0;i<8;i++)
+        {
+            led_pattern = 0xFF;
+            led_pattern &=~(i<<i);
+            P0 = led_pattern;
+            delay_ms(500);
+        }
 
- 
+}
 
     return 0;
 }
